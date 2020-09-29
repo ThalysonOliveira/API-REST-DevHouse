@@ -1,17 +1,23 @@
 import route from 'color-convert/route'
 import express from 'express'
 import routes from './routes'
-class App{
-    constructor(){
+import mongoose from 'mongoose'
+
+class App {
+    constructor() {
         this.server = express()
+        mongoose.connect('mongodb://localhost/devhouse', {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        })
         this.middlewares()
         this.routes()
     }
 
-    middlewares(){
+    middlewares() {
         this.server.use(express.json())
     }
-    routes(){
+    routes() {
         this.server.use(routes)
     }
 }
