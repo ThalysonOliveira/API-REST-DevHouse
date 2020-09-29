@@ -1,9 +1,14 @@
-import { Console } from 'console'
 import House from '../models/House'
 import User from '../models/User'
 import *as Yup from 'yup'
 
 class HouseController {
+    async index(req,res){
+        const {status} = req.query
+        const house = await House.find({status})
+        return res.json(house)
+    }
+
     async store(req, res) {
         const schema = Yup.object().shape({
             description: Yup.string().required(),
