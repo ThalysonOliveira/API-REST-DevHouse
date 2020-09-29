@@ -3,10 +3,10 @@ import User from '../models/User'
 import House from '../models/House'
 
 class ReserveController {
-    async index(req,res){
-        const {user_id} = req.headers
-        
-        const reserve = await Reserve.find({user: user_id}).populate('house')
+    async index(req, res) {
+        const { user_id } = req.headers
+
+        const reserve = await Reserve.find({ user: user_id }).populate('house')
 
         return res.json(reserve)
 
@@ -39,6 +39,16 @@ class ReserveController {
         await reserve.populate('house').populate('user').execPopulate()
         return res.json(reserve)
 
+    }
+    async destroy(req, res) {
+        const { reserve_id } = req.body
+
+        const reserve = await Reserve.findByIdAndDelete({ _id: reserve_id })
+
+        if(!reserve){
+            return res.status(400).json({error: 'Reserva não encontrada.'})
+        }
+        return res.json({message: 'Reserva cancelada.'})
     }
 }
 
