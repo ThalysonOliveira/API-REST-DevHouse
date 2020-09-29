@@ -1,4 +1,4 @@
-import {Router} from 'express'
+import { Router } from 'express'
 const routes = new Router()
 
 import multer from 'multer'
@@ -8,11 +8,11 @@ const upload = multer(uploadConfig)
 import SessionController from './controllers/SessionController'
 import HouseController from './controllers/HouseController'
 
-routes.post('/sessionuser',SessionController.store)
+routes.post('/sessionuser', SessionController.store)
 
-routes.post('/createhouse',upload.single('thumbnail'),HouseController.store)
+routes.post('/createhouse', upload.single('thumbnail'), HouseController.store)
 routes.get('/houses', HouseController.index)
-routes.put('/house/:house_id',upload.single('thumbnail'),HouseController.update)
-
+routes.put('/house/:house_id', upload.single('thumbnail'), HouseController.update)
+routes.delete('/house',HouseController.destroy)
 
 export default routes
