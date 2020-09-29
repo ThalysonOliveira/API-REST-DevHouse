@@ -21,5 +21,6 @@ routes.get('/dashboard', DashboardController.show)
 
 routes.get('/reserve', ReserveController.index)
 routes.post('/house/:house_id/reserve', ReserveController.store)
+routes.delete('/reserve/cancel', ReserveController.destroy)
 
 export default routes
