@@ -1,0 +1,18 @@
+{
+  "name": "dev-house",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Thalyson Oliveira <thalysonoliveira150@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.7",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.4",
+    "sucrase": "^3.15.0",
+    "yup": "^0.29.3"
+  }
+}
