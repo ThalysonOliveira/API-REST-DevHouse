@@ -11,6 +11,7 @@ import HouseController from './controllers/HouseController'
 routes.post('/sessionuser',SessionController.store)
 
 routes.post('/createhouse',upload.single('thumbnail'),HouseController.store)
+routes.get('/houses', HouseController.index)
 
 
 export default routes
