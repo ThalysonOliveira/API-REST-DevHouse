@@ -8,7 +8,6 @@ class HouseController {
         const house = await House.find({ status })
         return res.json(house)
     }
-
     async store(req, res) {
         const schema = Yup.object().shape({
             description: Yup.string().required(),
@@ -72,13 +71,13 @@ class HouseController {
     }
     async destroy(req, res) {
         const { house_id } = req.body
-        const {user_id} = req.headers
+        const { user_id } = req.headers
 
-        const user = await User.findById({_id: user_id})
-        const house = await House.findById({_id: house_id})
+        const user = await User.findById({ _id: user_id })
+        const house = await House.findById({ _id: house_id })
 
-        if(String(user._id)!==String(house.user)){
-            return res.status(401).json({error: 'Não autorizado.'})
+        if (String(user._id) !== String(house.user)) {
+            return res.status(401).json({ error: 'Não autorizado.' })
         }
 
         await House.findByIdAndDelete({ _id: house_id })
