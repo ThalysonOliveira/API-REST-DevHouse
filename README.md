@@ -33,7 +33,7 @@ Esse projeto foi desenvolvido utilizando a seguinte tecnologia:
 ## :zap: Como usar
 
 - Faça um clone desse repositório: `git clone https://github.com/ThalysonOliveira/DevHouse-API.git
-- Instale as dependências: `yarn` ou `npm install`
+- Instale as dependências: `yarn`
 - Inicie seu banco MongoDB
 - Inicie a aplicação:
    - Rode o comando de inicialização: `yarn dev` 
