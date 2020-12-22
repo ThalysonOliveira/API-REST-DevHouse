@@ -25,7 +25,7 @@ Esse projeto foi desenvolvido utilizando a seguinte tecnologia:
 ## :fire: **Pré-requisitos**
 
 - [Node.js](https://nodejs.org/en/)
-- [NPM](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/)
+- [Yarn](https://yarnpkg.com/)
 - [MongoDB](https://www.mongodb.com/)
 
 
@@ -36,7 +36,7 @@ Esse projeto foi desenvolvido utilizando a seguinte tecnologia:
 - Instale as dependências: `yarn` ou `npm install`
 - Inicie seu banco MongoDB
 - Inicie a aplicação:
-   - Rode o comando de inicialização: `yarn start` ou `npm start`
+   - Rode o comando de inicialização: `yarn dev` 
 
 <a id="funcionalidades"></a>
 ## 🛠️ Funcionalidades
