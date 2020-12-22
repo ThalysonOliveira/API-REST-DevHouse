@@ -31,7 +31,7 @@ Esse projeto foi desenvolvido utilizando a seguinte tecnologia:
 <a id="como-usar"></a>
 ## :zap: Como usar
 
-- Faça um clone desse repositório: `git clone https://github.com/ThalysonOliveira/API-REST-DevHouse.git
+- Faça um clone desse repositório: `git clone https://github.com/ThalysonOliveira/DevHouse-API.git
 - Instale as dependências: `yarn` ou `npm install`
 - Inicie seu banco MongoDB
 - Inicie a aplicação:
