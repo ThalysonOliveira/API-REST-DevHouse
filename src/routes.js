@@ -1,14 +1,14 @@
 import { Router } from 'express'
-const routes = new Router()
 
 import multer from 'multer'
 import uploadConfig from './config/upload'
-const upload = multer(uploadConfig)
 
 import SessionController from './controllers/SessionController'
 import HouseController from './controllers/HouseController'
 import DashboardController from './controllers/DashboardController'
 import ReserveController from './controllers/ReserveController'
+const routes = new Router()
+const upload = multer(uploadConfig)
 
 routes.post('/sessionuser', SessionController.store)
 
